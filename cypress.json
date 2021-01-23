@@ -1,0 +1,16 @@
+{
+  "watchForFileChanges": false,
+  "chromeWebSecurity": false,
+  "testFiles": [
+    "shadowDOM.spec.js"
+  ],
+  "retries": 1,
+  "reporter": "../node_modules/mochawesome/src/mochawesome.js",
+  "reporterOptions": {
+    "overwrite": false,
+    "html": false,
+    "json": true
+  },
+  "baseUrl": "http://localhost:3000/",
+  "projectId": "d5zibb"
+}

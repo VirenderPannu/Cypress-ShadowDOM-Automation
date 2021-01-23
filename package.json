@@ -1,0 +1,28 @@
+{
+  "name": "cypress-automation",
+  "version": "1.0.0",
+  "description": "Cypress Automation for Shadow DOM",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "delete:reportFolder": "rm -rf mochawesome-report/",
+    "test:cli": "npm run delete:reportFolder && cypress run",
+    "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress-combined-report.json",
+    "create:html:report": "npm run merge:reports && marge --reportDir TestReport cypress-combined-report.json"
+  },
+  "author": "Virender Singh",
+  "license": "Stale Element",
+  "devDependencies": {
+    "cypress": "^6.3.0",
+    "cypress-downloadfile": "^1.2.0",
+    "cypress-file-upload": "^4.1.1",
+    "cypress-select-tests": "^1.5.9",
+    "mocha": "^8.2.1",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0"
+  },
+  "dependencies": {
+    "chromedriver": "^87.0.7"
+  }
+}
